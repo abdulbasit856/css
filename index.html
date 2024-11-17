@@ -1,0 +1,610 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors and Properties</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Selectors and Properties</h1>
+
+      <h2>Selectors</h2>
+      <ol>
+        <li>
+          <strong>1. Universal Selector</strong> (<code>*</code>)<br />
+          <em>Selects all elements in the document.</em><br />
+          <code>* { margin: 0; padding: 0; }</code>
+        </li>
+        <li>
+          <strong>2. Type Selector</strong> (<code>element</code>)<br />
+          <em>Selects all elements of a given type (e.g., div, p, h1).</em
+          ><br />
+          <code>p { color: blue; }</code>
+        </li>
+        <li>
+          <strong>3. Class Selector</strong> (<code>.classname</code>)<br />
+          <em>Selects elements with a specific class.</em><br />
+          <code>.highlight { background-color: yellow; }</code>
+        </li>
+        <li>
+          <strong>4. ID Selector</strong> (<code>#idname</code>)<br />
+          <em>Selects an element with a specific ID.</em><br />
+          <code>#header { font-size: 24px; }</code>
+        </li>
+        <li>
+          <strong>5. Attribute Selector</strong>
+          (<code>[attribute]</code>)<br />
+          <em>Selects elements with a specific attribute.</em><br />
+          <code>input[type="text"] { border: 1px solid #ccc; }</code>
+        </li>
+        <li>
+          <strong>6. Descendant Selector</strong> (<code
+            >ancestor descendant</code
+          >)<br />
+          <em>Selects elements that are descendants of a specified element.</em
+          ><br />
+          <code>div p { margin: 10px; }</code>
+        </li>
+        <li>
+          <strong>7. Child Selector</strong> (<code>parent > child</code>)<br />
+          <em>Selects direct children of a specified element.</em><br />
+          <code>ul > li { list-style-type: none; }</code>
+        </li>
+        <li>
+          <strong>8. Adjacent Sibling Selector</strong> (<code>A + B</code
+          >)<br />
+          <em>Selects an element that is directly after a specified element.</em
+          ><br />
+          <code>h1 + p { margin-top: 0; }</code>
+        </li>
+        <li>
+          <strong>9. General Sibling Selector</strong> (<code>A ~ B</code
+          >)<br />
+          <em>Selects all siblings after a specified element.</em><br />
+          <code>h1 ~ p { color: green; }</code>
+        </li>
+        <li>
+          <strong>10. Pseudo-class Selectors</strong>
+          (<code>:pseudo-class</code>)<br />
+          <em>Selects elements based on their state.</em><br />
+          <code>a:hover { text-decoration: underline; }</code>
+        </li>
+        <li>
+          <strong>11. Pseudo-element Selectors</strong>
+          (<code>::pseudo-element</code>)<br />
+          <em>Selects a part of an element.</em><br />
+          <code>p::first-line { font-weight: bold; }</code>
+        </li>
+      </ol>
+
+      <h2>Properties</h2>
+      <div class="property-category">
+        <h3>Color Properties</h3>
+        <ul>
+          <li>
+            <strong>1. color</strong>: <em>Sets the text color.</em><br />
+            <code>color: red;</code>
+          </li>
+          <li>
+            <strong>2. background-color</strong>:
+            <em>Sets the background color.</em><br />
+            <code>background-color: blue;</code>
+          </li>
+          <li>
+            <strong>3. border-color</strong>: <em>Sets the border color.</em
+            ><br />
+            <code>border-color: green;</code>
+          </li>
+          <li>
+            <strong>4. outline-color</strong>: <em>Sets the outline color.</em
+            ><br />
+            <code>outline-color: orange;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Text Properties</h3>
+        <ul>
+          <li>
+            <strong>1. font-family</strong>:
+            <em>Specifies the font for text.</em><br />
+            <code>font-family: Arial, sans-serif;</code>
+          </li>
+          <li>
+            <strong>2. font-size</strong>: <em>Sets the size of the font.</em
+            ><br />
+            <code>font-size: 16px;</code>
+          </li>
+          <li>
+            <strong>3. font-style</strong>:
+            <em>Sets the style of the font (normal, italic, etc.).</em><br />
+            <code>font-style: italic;</code>
+          </li>
+          <li>
+            <strong>4. font-weight</strong>:
+            <em>Sets the thickness of the font.</em><br />
+            <code>font-weight: bold;</code>
+          </li>
+          <li>
+            <strong>5. line-height</strong>:
+            <em>Sets the space between lines of text.</em><br />
+            <code>line-height: 1.5;</code>
+          </li>
+          <li>
+            <strong>6. text-align</strong>:
+            <em>Sets the horizontal alignment of text.</em><br />
+            <code>text-align: center;</code>
+          </li>
+          <li>
+            <strong>7. text-decoration</strong>:
+            <em>Sets decoration on text (underline, overline, etc.).</em><br />
+            <code>text-decoration: underline;</code>
+          </li>
+          <li>
+            <strong>8. text-transform</strong>:
+            <em>Controls text case (uppercase, lowercase, etc.).</em><br />
+            <code>text-transform: uppercase;</code>
+          </li>
+          <li>
+            <strong>9. letter-spacing</strong>:
+            <em>Sets space between letters.</em><br />
+            <code>letter-spacing: 0.1em;</code>
+          </li>
+          <li>
+            <strong>10. word-spacing</strong>: <em>Sets space between words.</em
+            ><br />
+            <code>word-spacing: 0.2em;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Box Model Properties</h3>
+        <ul>
+          <li>
+            <strong>1. margin</strong>:
+            <em>Sets the space outside an element.</em><br />
+            <code>margin: 20px;</code>
+          </li>
+          <li>
+            <strong>2. padding</strong>:
+            <em>Sets the space inside an element.</em><br />
+            <code>padding: 10px;</code>
+          </li>
+          <li>
+            <strong>3. border</strong>:
+            <em>Sets the border around an element.</em><br />
+            <code>border: 1px solid black;</code>
+          </li>
+          <li>
+            <strong>4. border-radius</strong>:
+            <em>Sets rounded corners for an element.</em><br />
+            <code>border-radius: 5px;</code>
+          </li>
+          <li>
+            <strong>5. box-shadow</strong>:
+            <em>Adds shadow effects around an element.</em><br />
+            <code>box-shadow: 2px 2px 5px gray;</code>
+          </li>
+          <li>
+            <strong>6. width</strong>: <em>Sets the width of an element.</em
+            ><br />
+            <code>width: 100px;</code>
+          </li>
+          <li>
+            <strong>7. height</strong>: <em>Sets the height of an element.</em
+            ><br />
+            <code>height: 50px;</code>
+          </li>
+          <li>
+            <strong>8. max-width</strong>:
+            <em>Sets the maximum width of an element.</em><br />
+            <code>max-width: 300px;</code>
+          </li>
+          <li>
+            <strong>9. max-height</strong>:
+            <em>Sets the maximum height of an element.</em><br />
+            <code>max-height: 200px;</code>
+          </li>
+          <li>
+            <strong>10. min-width</strong>:
+            <em>Sets the minimum width of an element.</em><br />
+            <code>min-width: 50px;</code>
+          </li>
+          <li>
+            <strong>11. min-height</strong>:
+            <em>Sets the minimum height of an element.</em><br />
+            <code>min-height: 30px;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Positioning Properties</h3>
+        <ul>
+          <li>
+            <strong>1. position</strong>:
+            <em>Sets the type of positioning for an element.</em><br />
+            <code>position: relative;</code>
+          </li>
+          <li>
+            <strong>2. top</strong>:
+            <em>Sets the top position of a positioned element.</em><br />
+            <code>top: 10px;</code>
+          </li>
+          <li>
+            <strong>3. right</strong>:
+            <em>Sets the right position of a positioned element.</em><br />
+            <code>right: 20px;</code>
+          </li>
+          <li>
+            <strong>4. bottom</strong>:
+            <em>Sets the bottom position of a positioned element.</em><br />
+            <code>bottom: 30px;</code>
+          </li>
+          <li>
+            <strong>5. left</strong>:
+            <em>Sets the left position of a positioned element.</em><br />
+            <code>left: 40px;</code>
+          </li>
+          <li>
+            <strong>6. z-index</strong>:
+            <em>Sets the stack order of an element.</em><br />
+            <code>z-index: 10;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Display Properties</h3>
+        <ul>
+          <li>
+            <strong>1. display</strong>:
+            <em>Specifies the display behavior of an element.</em><br />
+            <code>display: block;</code>
+          </li>
+          <li>
+            <strong>2. visibility</strong>:
+            <em>Specifies whether an element is visible or hidden.</em><br />
+            <code>visibility: hidden;</code>
+          </li>
+          <li>
+            <strong>3. overflow</strong>:
+            <em
+              >Specifies what happens when content overflows an element's
+              box.</em
+            ><br />
+            <code>overflow: auto;</code>
+          </li>
+          <li>
+            <strong>4. flex</strong>:
+            <em>Specifies the flex properties for a flex container.</em><br />
+            <code>flex: 1;</code>
+          </li>
+          <li>
+            <strong>5. grid</strong>:
+            <em>Specifies the grid properties for a grid container.</em><br />
+            <code>grid-template-columns: repeat(3, 1fr);</code>
+          </li>
+          <li>
+            <strong>6. float</strong>:
+            <em>Specifies how an element should float.</em><br />
+            <code>float: left;</code>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors and Properties</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Selectors and Properties</h1>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a selector or property..."
+        onkeyup="filterItems()"
+      />
+
+      <h2>Selectors</h2>
+      <ol id="selectorsList">
+        <li>
+          <strong>1. Universal Selector</strong> (<code>*</code>)<br />
+          <em>Selects all elements in the document.</em><br />
+          <code>* { margin: 0; padding: 0; }</code>
+        </li>
+        <li>
+          <strong>2. Type Selector</strong> (<code>element</code>)<br />
+          <em>Selects all elements of a given type (e.g., div, p, h1).</em
+          ><br />
+          <code>p { color: blue; }</code>
+        </li>
+        <li>
+          <strong>3. Class Selector</strong> (<code>.classname</code>)<br />
+          <em>Selects elements with a specific class.</em><br />
+          <code>.highlight { background-color: yellow; }</code>
+        </li>
+        <li>
+          <strong>4. ID Selector</strong> (<code>#idname</code>)<br />
+          <em>Selects an element with a specific ID.</em><br />
+          <code>#header { font-size: 24px; }</code>
+        </li>
+        <li>
+          <strong>5. Attribute Selector</strong>
+          (<code>[attribute]</code>)<br />
+          <em>Selects elements with a specific attribute.</em><br />
+          <code>input[type="text"] { border: 1px solid #ccc; }</code>
+        </li>
+        <li>
+          <strong>6. Descendant Selector</strong> (<code
+            >ancestor descendant</code
+          >)<br />
+          <em>Selects elements that are descendants of a specified element.</em
+          ><br />
+          <code>div p { margin: 10px; }</code>
+        </li>
+        <li>
+          <strong>7. Child Selector</strong> (<code>parent > child</code>)<br />
+          <em>Selects direct children of a specified element.</em><br />
+          <code>ul > li { list-style-type: none; }</code>
+        </li>
+        <li>
+          <strong>8. Adjacent Sibling Selector</strong> (<code>A + B</code
+          >)<br />
+          <em>Selects an element that is directly after a specified element.</em
+          ><br />
+          <code>h1 + p { margin-top: 0; }</code>
+        </li>
+        <li>
+          <strong>9. General Sibling Selector</strong> (<code>A ~ B</code
+          >)<br />
+          <em>Selects all siblings after a specified element.</em><br />
+          <code>h1 ~ p { color: green; }</code>
+        </li>
+        <li>
+          <strong>10. Pseudo-class Selectors</strong>
+          (<code>:pseudo-class</code>)<br />
+          <em>Selects elements based on their state.</em><br />
+          <code>a:hover { text-decoration: underline; }</code>
+        </li>
+        <li>
+          <strong>11. Pseudo-element Selectors</strong>
+          (<code>::pseudo-element</code>)<br />
+          <em>Selects a part of an element.</em><br />
+          <code>p::first-line { font-weight: bold; }</code>
+        </li>
+      </ol>
+
+      <h2>Properties</h2>
+      <div class="property-category">
+        <h3>Color Properties</h3>
+        <ul id="colorProperties">
+          <li>
+            <strong>1. color</strong>: <em>Sets the text color.</em><br />
+            <code>color: red;</code>
+          </li>
+          <li>
+            <strong>2. background-color</strong>:
+            <em>Sets the background color.</em><br />
+            <code>background-color: blue;</code>
+          </li>
+          <li>
+            <strong>3. border-color</strong>: <em>Sets the border color.</em
+            ><br />
+            <code>border-color: green;</code>
+          </li>
+          <li>
+            <strong>4. outline-color</strong>: <em>Sets the outline color.</em
+            ><br />
+            <code>outline-color: orange;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Text Properties</h3>
+        <ul id="textProperties">
+          <li>
+            <strong>1. font-family</strong>:
+            <em>Specifies the font for text.</em><br />
+            <code>font-family: Arial, sans-serif;</code>
+          </li>
+          <li>
+            <strong>2. font-size</strong>: <em>Sets the size of the font.</em
+            ><br />
+            <code>font-size: 16px;</code>
+          </li>
+          <li>
+            <strong>3. font-style</strong>:
+            <em>Sets the style of the font (normal, italic, etc.).</em><br />
+            <code>font-style: italic;</code>
+          </li>
+          <li>
+            <strong>4. font-weight</strong>:
+            <em>Sets the thickness of the font.</em><br />
+            <code>font-weight: bold;</code>
+          </li>
+          <li>
+            <strong>5. line-height</strong>:
+            <em>Sets the space between lines of text.</em><br />
+            <code>line-height: 1.5;</code>
+          </li>
+          <li>
+            <strong>6. text-align</strong>:
+            <em>Sets the horizontal alignment of text.</em><br />
+            <code>text-align: center;</code>
+          </li>
+          <li>
+            <strong>7. text-decoration</strong>:
+            <em>Sets decoration on text (underline, overline, etc.).</em><br />
+            <code>text-decoration: underline;</code>
+          </li>
+          <li>
+            <strong>8. text-transform</strong>:
+            <em>Controls text case (uppercase, lowercase, etc.).</em><br />
+            <code>text-transform: uppercase;</code>
+          </li>
+          <li>
+            <strong>9. letter-spacing</strong>:
+            <em>Sets space between letters.</em><br />
+            <code>letter-spacing: 0.1em;</code>
+          </li>
+          <li>
+            <strong>10. word-spacing</strong>: <em>Sets space between words.</em
+            ><br />
+            <code>word-spacing: 0.2em;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Box Model Properties</h3>
+        <ul id="boxModelProperties">
+          <li>
+            <strong>1. margin</strong>:
+            <em>Sets the space outside an element.</em><br />
+            <code>margin: 20px;</code>
+          </li>
+          <li>
+            <strong>2. padding</strong>:
+            <em>Sets the space inside an element.</em><br />
+            <code>padding: 10px;</code>
+          </li>
+          <li>
+            <strong>3. border</strong>:
+            <em>Sets the border around an element.</em><br />
+            <code>border: 1px solid black;</code>
+          </li>
+          <li>
+            <strong>4. border-radius</strong>:
+            <em>Sets rounded corners for an element.</em><br />
+            <code>border-radius: 5px;</code>
+          </li>
+          <li>
+            <strong>5. box-shadow</strong>:
+            <em>Adds shadow effects around an element.</em><br />
+            <code>box-shadow: 2px 2px 5px gray;</code>
+          </li>
+          <li>
+            <strong>6. width</strong>: <em>Sets the width of an element.</em
+            ><br />
+            <code>width: 100px;</code>
+          </li>
+          <li>
+            <strong>7. height</strong>: <em>Sets the height of an element.</em
+            ><br />
+            <code>height: 50px;</code>
+          </li>
+          <li>
+            <strong>8. max-width</strong>:
+            <em>Sets the maximum width of an element.</em><br />
+            <code>max-width: 300px;</code>
+          </li>
+          <li>
+            <strong>9. max-height</strong>:
+            <em>Sets the maximum height of an element.</em><br />
+            <code>max-height: 200px;</code>
+          </li>
+          <li>
+            <strong>10. min-width</strong>:
+            <em>Sets the minimum width of an element.</em><br />
+            <code>min-width: 50px;</code>
+          </li>
+          <li>
+            <strong>11. min-height</strong>:
+            <em>Sets the minimum height of an element.</em><br />
+            <code>min-height: 30px;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Positioning Properties</h3>
+        <ul id="positioningProperties">
+          <li>
+            <strong>1. position</strong>:
+            <em>Sets the type of positioning for an element.</em><br />
+            <code>position: relative;</code>
+          </li>
+          <li>
+            <strong>2. top</strong>:
+            <em>Sets the top position of a positioned element.</em><br />
+            <code>top: 10px;</code>
+          </li>
+          <li>
+            <strong>3. right</strong>:
+            <em>Sets the right position of a positioned element.</em><br />
+            <code>right: 20px;</code>
+          </li>
+          <li>
+            <strong>4. bottom</strong>:
+            <em>Sets the bottom position of a positioned element.</em><br />
+            <code>bottom: 30px;</code>
+          </li>
+          <li>
+            <strong>5. left</strong>:
+            <em>Sets the left position of a positioned element.</em><br />
+            <code>left: 40px;</code>
+          </li>
+          <li>
+            <strong>6. z-index</strong>:
+            <em>Sets the stack order of an element.</em><br />
+            <code>z-index: 10;</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="property-category">
+        <h3>Display Properties</h3>
+        <ul id="displayProperties">
+          <li>
+            <strong>1. display</strong>:
+            <em>Specifies the display behavior of an element.</em><br />
+            <code>display: block;</code>
+          </li>
+          <li>
+            <strong>2. visibility</strong>:
+            <em>Specifies whether an element is visible or hidden.</em><br />
+            <code>visibility: hidden;</code>
+          </li>
+          <li>
+            <strong>3. overflow</strong>:
+            <em
+              >Specifies what happens when content overflows an element's
+              box.</em
+            ><br />
+            <code>overflow: auto;</code>
+          </li>
+          <li>
+            <strong>4. flex</strong>:
+            <em>Specifies the flex properties for a flex container.</em><br />
+            <code>flex: 1;</code>
+          </li>
+          <li>
+            <strong>5. grid</strong>:
+            <em>Specifies the grid properties for a grid container.</em><br />
+            <code>grid-template-columns: repeat(3, 1fr);</code>
+          </li>
+          <li>
+            <strong>6. float</strong>:
+            <em>Specifies how an element should float.</em><br />
+            <code>float: left;</code>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
